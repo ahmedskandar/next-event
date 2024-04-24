@@ -30,7 +30,7 @@ const Header = () => {
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden"
+        className="sm:hidden text-white"
       />
       <NavbarBrand>
         <p className="text-white text-xl">Next<span className="font-bold text-xl text-amber-600">Events</span></p>
@@ -49,7 +49,7 @@ const Header = () => {
           <Link className="text-white" href="#">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} className="text-white" href="#" variant="flat">
+          <Button as={Link} className="text-white" href="#" color="warning" variant="flat">
             Sign Up
           </Button>
         </NavbarItem>
