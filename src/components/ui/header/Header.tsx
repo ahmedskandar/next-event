@@ -33,7 +33,9 @@ const Header = () => {
         className="sm:hidden text-white"
       />
       <NavbarBrand>
-        <p className="text-white text-xl">Next<span className="font-bold text-xl text-amber-600">Events</span></p>
+        <p className="text-white text-xl">
+          Next<span className="font-bold text-xl text-[#E4C59E]">Event</span>
+        </p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {MENU.map((item) => (
@@ -46,10 +48,17 @@ const Header = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link className="text-white" href="#">Login</Link>
+          <Link className="text-white" href="#">
+            Login
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} className="text-white" href="#" color="warning" variant="flat">
+          <Button
+            as={Link}
+            href="#"
+            color="primary"
+            variant="flat"
+          >
             Sign Up
           </Button>
         </NavbarItem>
@@ -57,11 +66,7 @@ const Header = () => {
       <NavbarMenu>
         {MENU.map((item) => (
           <NavbarMenuItem key={item.route}>
-            <Link
-              color="foreground"
-              href={item.route}
-              size="lg"
-            >
+            <Link color="foreground" href={item.route} size="lg">
               {item.value}
             </Link>
           </NavbarMenuItem>

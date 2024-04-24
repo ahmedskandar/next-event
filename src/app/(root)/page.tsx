@@ -6,17 +6,17 @@ export default function Home() {
     <main>
       <section className="h-[100svh] relative">
         <Image src="/assets/images/event-background.jpg" alt="" fill />
-        <div className="absolute p-5 bg-black/60 inset-0 flex flex-col justify-center items-center">
+        <div className="absolute p-5 bg-black/50 inset-0 flex flex-col justify-center items-center">
           <h1 className="text-white text-3xl text-center lg:text-5xl font-bold font-serif">
             Ready to attend your next event?
           </h1>
           <p className="text-center mt-1 text-lg text-white max-w-prose">
             Discover exciting events near you and beyond with our comprehensive
-            events website. 
+            events website.
           </p>
           <div className="flex gap-5 mt-8">
-            <Button color="warning">Find Events</Button>
-            <Button color="warning" variant="ghost">
+            <Button color="primary">Find Events</Button>
+            <Button variant="ghost" color="primary">
               Create Events
             </Button>
           </div>
