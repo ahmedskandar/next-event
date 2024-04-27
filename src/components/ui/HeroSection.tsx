@@ -1,4 +1,6 @@
+import { MENU } from "@/lib/constants";
 import { Button } from "@nextui-org/button";
+import { Link } from "@nextui-org/link";
 import Image from "next/image";
 import React from "react";
 
@@ -21,7 +23,7 @@ const HeroSection = () => {
           events website.
         </p>
         <div className="flex gap-5 mt-8">
-          <Button color="primary">Find Events</Button>
+          <Button as={Link} color="primary" href={MENU[1].route}>{MENU[1].value}</Button>
           <Button variant="ghost" color="primary" className="">
             Create Events
           </Button>
