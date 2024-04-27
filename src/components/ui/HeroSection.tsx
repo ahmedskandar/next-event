@@ -8,7 +8,8 @@ const HeroSection = () => {
       <Image
         src="/assets/images/event-background.jpg"
         alt=""
-        fill
+        width={1920}
+        height={1080}
         className="object-cover"
       />
       <div className="absolute p-5 bg-black/60 inset-0 flex flex-col justify-center items-center">
