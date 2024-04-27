@@ -10,7 +10,7 @@ const HeroSection = () => {
         alt=""
         width={1920}
         height={1080}
-        className="object-cover"
+        className="object-cover h-full w-full"
       />
       <div className="absolute p-5 bg-black/60 inset-0 flex flex-col justify-center items-center">
         <h1 className="text-white text-2xl md:text-3xl text-center lg:text-5xl font-bold font-serif">
