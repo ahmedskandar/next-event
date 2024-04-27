@@ -27,7 +27,7 @@ const Header = () => {
       maxWidth="xl"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="fixed w-full flex z-50 bg-transparent/50"
+      className="fixed w-full flex z-50 bg-transparent/60"
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
