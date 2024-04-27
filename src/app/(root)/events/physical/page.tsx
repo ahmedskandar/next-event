@@ -2,7 +2,7 @@ import React from 'react'
 
 const PhysicalEventsPage = () => {
   return (
-    <div>PhysicalEventsPage</div>
+    <main>PhysicalEventsPage</main>
   )
 }
 
