@@ -41,9 +41,12 @@ const Header = () => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {MENU.slice(0, 4).map((item) => (
           <NavbarItem key={item.route}>
-            <Link className={cn("text-white", {
-              'text-primary-300': isActive(item.route)
-            })} href="#">
+            <Link
+              className={cn("text-white", {
+                "text-primary-100": isActive(item.route),
+              })}
+              href={item.route}
+            >
               {item.value}
             </Link>
           </NavbarItem>
@@ -62,22 +65,43 @@ const Header = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {MENU.map((item) => (
+        {MENU.slice(0, 4).map((item) => (
           <NavbarMenuItem key={item.route}>
-            <Link color="foreground" href={item.route} size="lg">
+            <Link
+              color="foreground"
+              className={cn("text-black", {
+                "text-primary-300": isActive(item.route),
+              })}
+              href={item.route}
+              size="lg"
+            >
               {item.value}
             </Link>
           </NavbarMenuItem>
         ))}
         <Divider />
         <NavbarMenuItem>
-          <Link color="foreground" size="lg" href="/sign-up">
-            Login
+          <Link
+            color="foreground"
+            size="lg"
+            className={cn("text-black", {
+              "text-primary-300": isActive(MENU[4].route),
+            })}
+            href={MENU[4].route}
+          >
+            {MENU[4].value}
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" size="lg" href="/sign-up">
-            Sign Up
+          <Link
+            color="foreground"
+            size="lg"
+            className={cn("text-black", {
+              "text-primary-300": isActive(MENU[5].route),
+            })}
+            href={MENU[5].route}
+          >
+            {MENU[5].value}
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>
