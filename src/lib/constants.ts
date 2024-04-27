@@ -6,7 +6,7 @@ export const MENU = [
     value: "Home",
   },
   {
-    route: "/find-events",
+    route: "/events",
     value: "Find events",
   },
   {
