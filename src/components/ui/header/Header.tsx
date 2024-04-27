@@ -20,13 +20,14 @@ import React, { useState } from "react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const isActive = (route: string) => pathname === route
   return (
     <Navbar
       shouldHideOnScroll
       maxWidth="xl"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="fixed w-full flex z-50 bg-transparent"
+      className="fixed w-full flex z-50 bg-transparent/50"
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -34,13 +35,15 @@ const Header = () => {
       />
       <NavbarBrand>
         <p className="text-white text-xl">
-          Next<span className="font-bold text-xl text-[#E4C59E]">Event</span>
+          Next<span className="font-bold text-xl text-primary-100">Event</span>
         </p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {MENU.map((item) => (
+        {MENU.slice(0, 4).map((item) => (
           <NavbarItem key={item.route}>
-            <Link className="text-white" href="#">
+            <Link className={cn("text-white", {
+              'text-primary-300': isActive(item.route)
+            })} href="#">
               {item.value}
             </Link>
           </NavbarItem>
@@ -48,18 +51,13 @@ const Header = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link className="text-white" href="#">
-            Login
+          <Link className="text-white" href={MENU[4].route}>
+            {MENU[4].value}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Button
-            as={Link}
-            href="#"
-            color="primary"
-            variant="flat"
-          >
-            Sign Up
+          <Button as={Link} color="primary" href={MENU[5].route} variant="flat">
+            {MENU[5].value}
           </Button>
         </NavbarItem>
       </NavbarContent>

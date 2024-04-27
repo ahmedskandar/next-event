@@ -6,7 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|divider|link|navbar|progress|ripple|spinner).js",
+    "./node_modules/@nextui-org/theme/dist/components/(button|date-picker|divider|link|navbar|progress|select|ripple|spinner|calendar|date-input|popover|listbox|scroll-shadow).js",
   ],
   theme: {
     extend: {
@@ -24,7 +24,10 @@ const config: Config = {
           colors: {
             primary: {
               DEFAULT: "#E4C59E",
-              foreground: 'black'
+              100: "#E4C59E",
+              300: "#AF8260",
+              500: "#322C2B",
+              foreground: "black",
             },
           },
         },

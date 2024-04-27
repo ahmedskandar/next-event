@@ -4,7 +4,7 @@ export const MENU = [
     value: "Home",
   },
   {
-    route: "/",
+    route: "/find-events",
     value: "Find events",
   },
   {
@@ -15,4 +15,12 @@ export const MENU = [
     route: "/contact",
     value: "Contact",
   },
+  {
+    route: "/login",
+    value: "Login",
+  },
+  {
+    route: "/sign-up",
+    value: "Sign up",
+  }
 ];
