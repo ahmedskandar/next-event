@@ -1,12 +1,9 @@
-import VirtualEventsSlider from "@/components/ui/VirtualEventsSlider";
 import HeroSection from "@/components/ui/HeroSection";
-import TrendingEventsSlider from "@/components/ui/TrendingEventsSlider";
+import EventsSection from "@/components/ui/EventsSection";
 import WhyJoinSection from "@/components/ui/WhyJoinSection";
 import WhyNextEventsSection from "@/components/ui/WhyNextEventsSection";
-import { Button } from "@nextui-org/button";
-import Image from "next/image";
-import PhysicalEventsSlider from "@/components/ui/PhysicalEventsSlider";
 import FeaturedOrganizers from "@/components/ui/FeaturedOrganizers";
+import { SAMPLE_EVENTS_DATA } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -14,9 +11,9 @@ export default function Home() {
       <HeroSection />
       <WhyJoinSection />
       <WhyNextEventsSection />
-      <TrendingEventsSlider />
-      {/* <PhysicalEventsSlider />
-      <VirtualEventsSlider /> */}
+      <EventsSection title="Trending events in Nairobi" buttonPath="/events/trending" events={SAMPLE_EVENTS_DATA} />
+      <EventsSection title="Physical events in Nairobi" buttonPath="/events/physical" events={SAMPLE_EVENTS_DATA} />
+      <EventsSection title="Virtual events in Nairobi" buttonPath="/events/virtual" events={SAMPLE_EVENTS_DATA} />
       <FeaturedOrganizers />
     </main>
   );

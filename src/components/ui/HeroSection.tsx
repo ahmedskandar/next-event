@@ -1,6 +1,6 @@
-import { Button } from '@nextui-org/button';
-import Image from 'next/image';
-import React from 'react'
+import { Button } from "@nextui-org/button";
+import Image from "next/image";
+import React from "react";
 
 const HeroSection = () => {
   return (
@@ -20,18 +20,14 @@ const HeroSection = () => {
           events website.
         </p>
         <div className="flex gap-5 mt-8">
-          <Button className="bg-primary-100">Find Events</Button>
-          <Button
-            variant="ghost"
-            color='primary'
-            className=""
-          >
+          <Button color="primary">Find Events</Button>
+          <Button variant="ghost" color="primary" className="">
             Create Events
           </Button>
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default HeroSection
+export default HeroSection;
