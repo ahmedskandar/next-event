@@ -19,7 +19,7 @@ const EventsSection = ({
   // const [value4, setValue4] = useState<any>();
   // const [isLoading, setIsLoading] = useState(false);
   return (
-    <section>
+    <section className="my-20">
       <div className="flex mx-10 mt-10 md:mt-16 justify-between items-center">
         <h2 className="text-xl md:text-3xl font-serif text-primary-500">
           {title}
