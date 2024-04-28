@@ -1,4 +1,5 @@
 import EventsGrid from '@/components/ui/EventsGrid';
+import Filters from '@/components/ui/Filters';
 import { SAMPLE_EVENTS_DATA } from '@/lib/constants';
 import React from 'react'
 
@@ -11,6 +12,7 @@ const VirtualEventsPage = () => {
           Virtual Events
         </h2>
       </div>
+      <Filters />
       <EventsGrid events={SAMPLE_EVENTS_DATA} />
     </main>
   );
