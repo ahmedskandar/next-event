@@ -20,7 +20,9 @@ import React, { useState } from "react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isActive = (route: string) => pathname === route
+  const isActive = (route: string) =>
+    route === "/" ? pathname === "/" : pathname.startsWith(route);
+
   return (
     <Navbar
       shouldHideOnScroll
