@@ -1,6 +1,7 @@
 import EventsGrid from '@/components/ui/EventsGrid';
 import Filters from '@/components/ui/Filters';
 import { SAMPLE_EVENTS_DATA } from '@/lib/constants';
+import { Pagination } from '@nextui-org/pagination';
 import React from 'react'
 
 const VirtualEventsPage = () => {
@@ -14,6 +15,9 @@ const VirtualEventsPage = () => {
       </div>
       <Filters />
       <EventsGrid events={SAMPLE_EVENTS_DATA} />
+      <div className="flex mb-10 items-center justify-center">
+        <Pagination total={10} initialPage={1} />
+      </div>
     </main>
   );
 }
