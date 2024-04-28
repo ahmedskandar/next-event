@@ -4,6 +4,7 @@ import WhyJoinSection from "@/components/ui/WhyJoinSection";
 import WhyNextEventsSection from "@/components/ui/WhyNextEventsSection";
 import FeaturedOrganizers from "@/components/ui/FeaturedOrganizers";
 import { SAMPLE_EVENTS_DATA } from "@/lib/constants";
+import EventCategoriesSection from "@/components/ui/EventCategoriesSection";
 
 export default function Home() {
   return (
@@ -11,9 +12,7 @@ export default function Home() {
       <HeroSection />
       <WhyJoinSection />
       <WhyNextEventsSection />
-      <EventsSection title="Trending events in Nairobi" buttonPath="/events/trending" events={SAMPLE_EVENTS_DATA} />
-      <EventsSection title="Physical events in Nairobi" buttonPath="/events/physical" events={SAMPLE_EVENTS_DATA} />
-      <EventsSection title="Virtual events in Nairobi" buttonPath="/events/virtual" events={SAMPLE_EVENTS_DATA} />
+      <EventCategoriesSection />
       <FeaturedOrganizers />
     </main>
   );
