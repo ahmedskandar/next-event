@@ -2,11 +2,12 @@ import EventsSection from "@/components/ui/EventsSection";
 import { SAMPLE_EVENTS_DATA } from "@/lib/constants";
 import React from "react";
 
-const page = () => {
+const EventsPage = () => {
   return (
     <main>
-      <div className=" h-[70svh] shadow-xl flex bg-fixed justify-center items-center bg-[url('/assets/images/meeting2.jpg')] bg-bottom bg-cover">
-        <h2 className=" text-3xl md:text-6xl font-semibold text-primary-500 text-center">
+      <div className=" h-[70svh] shadow-xl relative flex bg-fixed justify-center items-center bg-[url('/assets/images/meeting2.jpg')] bg-bottom bg-cover">
+        <div className="absolute inset-0 bg-transparent/50" />
+        <h2 className=" text-3xl md:text-5xl z-10 text-white text-center">
           Events
         </h2>
       </div>
@@ -29,4 +30,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default EventsPage;
